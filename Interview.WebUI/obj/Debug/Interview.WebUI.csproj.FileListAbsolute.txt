@@ -1,0 +1,11 @@
+E:\VisualStudioProjects\InterviewSkillsTest\Interview.WebUI\bin\InterviewDatabase.mdf
+E:\VisualStudioProjects\InterviewSkillsTest\Interview.WebUI\bin\InterviewDatabase_log.ldf
+E:\VisualStudioProjects\InterviewSkillsTest\Interview.WebUI\bin\Interview.WebUI.dll.config
+E:\VisualStudioProjects\InterviewSkillsTest\Interview.WebUI\bin\Interview.WebUI.dll
+E:\VisualStudioProjects\InterviewSkillsTest\Interview.WebUI\bin\Interview.WebUI.pdb
+E:\VisualStudioProjects\InterviewSkillsTest\Interview.WebUI\bin\Interview.domain.exe
+E:\VisualStudioProjects\InterviewSkillsTest\Interview.WebUI\bin\Interview.domain.pdb
+E:\VisualStudioProjects\InterviewSkillsTest\Interview.WebUI\obj\Debug\Interview.WebUI.csprojResolveAssemblyReference.cache
+E:\VisualStudioProjects\InterviewSkillsTest\Interview.WebUI\obj\Debug\Interview.WebUI.dll.licenses
+E:\VisualStudioProjects\InterviewSkillsTest\Interview.WebUI\obj\Debug\Interview.WebUI.dll
+E:\VisualStudioProjects\InterviewSkillsTest\Interview.WebUI\obj\Debug\Interview.WebUI.pdb

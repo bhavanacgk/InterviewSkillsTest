@@ -1,0 +1,8 @@
+E:\VisualStudioProjects\InterviewSkillsTest\Interview.domain\bin\Debug\InterviewDatabase.mdf
+E:\VisualStudioProjects\InterviewSkillsTest\Interview.domain\bin\Debug\InterviewDatabase_log.ldf
+E:\VisualStudioProjects\InterviewSkillsTest\Interview.domain\bin\Debug\Interview.domain.exe.config
+E:\VisualStudioProjects\InterviewSkillsTest\Interview.domain\bin\Debug\Interview.domain.exe
+E:\VisualStudioProjects\InterviewSkillsTest\Interview.domain\bin\Debug\Interview.domain.pdb
+E:\VisualStudioProjects\InterviewSkillsTest\Interview.domain\obj\Debug\Interview.domain.exe
+E:\VisualStudioProjects\InterviewSkillsTest\Interview.domain\obj\Debug\Interview.domain.pdb
+E:\VisualStudioProjects\InterviewSkillsTest\Interview.domain\obj\Debug\Interview.domain.csprojResolveAssemblyReference.cache

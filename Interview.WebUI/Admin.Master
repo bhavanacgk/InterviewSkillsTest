@@ -1,0 +1,222 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Admin.master.cs" Inherits="Interview.WebUI.Admin" %>
+
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    <title>Interview Skills Test</title>
+		<style> 
+       ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  background-color: #333;
+}
+
+ul li {
+  display: block;
+  position: relative;
+  float: left;
+  background-color: #333;
+}
+li ul { display: none; 
+        background-color: #f9f9f9;
+}
+
+ul li a {
+  display: block;
+  padding: 1em;
+  text-decoration: none;
+  white-space: nowrap;
+  color: #fff;
+}
+
+ul li a:hover { background-color: #ddd; }
+
+li:hover > ul {
+  display: block;
+  position: absolute;
+}
+
+li:hover li { float: none;
+              background-color: #f9f9f9;
+  }
+
+li:hover a {  float: none;
+  background-color: #ddd;
+  color:black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+  text-align: left; }
+
+li:hover li a:hover { 
+                      background-color:white;
+                            color:green;
+}
+
+.main-navigation li ul li { border-top: 0; 
+                            background-color:white;
+                            color:green;
+}
+
+ul ul ul {
+  left: 100%;
+  top: 0;
+}
+ul:before,
+ul:after {
+  content: " "; /* 1 */
+  display: table; /* 2 */
+}
+
+ul:after { clear: both; }
+
+                body {
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.navbar {
+  overflow: hidden;
+  background-color: #333;
+}
+
+.navbar a {
+  float: left;
+  font-size: 16px;
+  color: white;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+
+.dropdown {
+  float: left;
+  overflow: hidden;
+}
+
+.dropdown .dropbtn {
+  font-size: 16px;  
+  border: none;
+  outline: none;
+  color: white;
+  padding: 14px 16px;
+  background-color: inherit;
+  font-family: inherit;
+  margin: 0;
+}
+
+.navbar a:hover, .dropdown:hover .dropbtn {
+  background-color: white; 
+                color: green; 
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #f9f9f9;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+}
+
+.dropdown-content a {
+  float: none;
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+  text-align: left;
+}
+
+.dropdown-content a:hover {
+  background-color: #ddd;
+}
+
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+			* { 
+				box-sizing: border-box; 
+			} 
+			
+			/* CSS property for header section */ 
+			.header { 
+				background-color: green; 
+				padding: 15px; 
+				text-align: center; 
+			} 
+			
+			  /* CSS property for nevigation menu */ 
+            .nav_menu { 
+                overflow: hidden; 
+                background-color: #333; 
+            } 
+            .nav_menu a { 
+                float: left; 
+                display: block; 
+                color: white; 
+                text-align: center; 
+                padding: 14px 16px; 
+                text-decoration: none; 
+            } 
+            .nav_menu a:hover { 
+                background-color: white; 
+                color: green; 
+            } 
+              
+			
+			/* CSS property for content section */ 
+			.columnA, .columnB, .columnC { 
+				float: left; 
+				width: 31%; 
+				padding: 15px; 
+				text-align:justify; 
+			} 
+			h2 { 
+				color:green; 
+				text-align:center; 
+			} 
+			
+			/* Media query to set website layout 
+			according to screen size */ 
+			@media screen and (max-width:600px) { 
+				.columnA, .columnB, .columnC { 
+					width: 50%; 
+				} 
+			} 
+			@media screen and (max-width:400px) { 
+				.columnA, .columnB, .columnC { 
+					width: 100%; 
+				} 
+			} 
+		</style> 
+	</head> 
+	
+	<body style="background-color:lightgreen"> 
+		 <form id="form1" runat="server">
+		<!-- header of website layout -->
+		<div class = "header"> 
+			<h2 style = "color:white;font-size:200%; font-weight: bolder;"> 
+				Interview Skills Test
+			</h2> 
+     <asp:Button runat="server" ID="btnLogout" OnClick="btnLogout_Click" Text="Logout" BackColor="#99FF33" BorderColor="#CCFF66" ForeColor="Red"/>
+
+		</div>
+		<ul class="main-navigation">
+  
+  <li><a href="AddBranch.aspx">Add Branch </a>
+  </li>
+  <li><a href="AddTopic.aspx">Add Topic </a>
+  </li>
+             <li><a href="AddDescription.aspx">Add Description </a></li>
+  <li><a href="AddQuestion.aspx">Add Questions </a></li>
+            
+</ul>
+          
+            <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server"> 
+        
+        </asp:ContentPlaceHolder>
+    </form>
+</body>
+</html>

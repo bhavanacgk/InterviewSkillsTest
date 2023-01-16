@@ -1,0 +1,246 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Site1.master.cs" Inherits="Interview.WebUI.Site1" %>
+
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    <title>Interview Skills Test</title>
+   
+		<style> 
+      .content {
+  max-width: 500px;
+  margin: auto;
+  background: white;
+  padding: 10px;
+}
+      ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  background-color: #333;
+}
+
+ul li {
+  display: block;
+  position: relative;
+  float: left;
+  background-color: #333;
+}
+li ul { display: none; 
+        background-color: #f9f9f9;
+}
+
+ul li a {
+  display: block;
+  padding: 1em;
+  text-decoration: none;
+  white-space: nowrap;
+  color: #fff;
+}
+
+ul li a:hover { background-color: #ddd; }
+
+li:hover > ul {
+  display: block;
+  position: absolute;
+}
+
+li:hover li { float: none;
+              background-color: #f9f9f9;
+  }
+
+li:hover a {  float: none;
+  background-color: #ddd;
+  color:black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+  text-align: left; }
+
+li:hover li a:hover { 
+                      background-color:white;
+                            color:green;
+}
+
+.main-navigation li ul li { border-top: 0; 
+                            background-color:white;
+                            color:green;
+}
+
+ul ul ul {
+  left: 100%;
+  top: 0;
+}
+ul:before,
+ul:after {
+  content: " "; /* 1 */
+  display: table; /* 2 */
+}
+
+ul:after { clear: both; }
+
+                body {
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.navbar {
+  overflow: hidden;
+  background-color: #333;
+}
+
+.navbar a {
+  float: left;
+  font-size: 16px;
+  color: white;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+
+.dropdown {
+  float: left;
+  overflow: hidden;
+}
+
+.dropdown .dropbtn {
+  font-size: 16px;  
+  border: none;
+  outline: none;
+  color: white;
+  padding: 14px 16px;
+  background-color: inherit;
+  font-family: inherit;
+  margin: 0;
+}
+
+.navbar a:hover, .dropdown:hover .dropbtn {
+  background-color: white; 
+                color: green; 
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #f9f9f9;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+}
+
+.dropdown-content a {
+  float: none;
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+  text-align: left;
+}
+
+.dropdown-content a:hover {
+  background-color: #ddd;
+}
+
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+			* { 
+				box-sizing: border-box; 
+			} 
+			
+			/* CSS property for header section */ 
+			.header { 
+				background-color: green; 
+				padding: 15px; 
+				text-align: center; 
+			} 
+			
+			  /* CSS property for nevigation menu */ 
+            .nav_menu { 
+                overflow: hidden; 
+                background-color: #333; 
+            } 
+            .nav_menu a { 
+                float: left; 
+                display: block; 
+                color: white; 
+                text-align: center; 
+                padding: 14px 16px; 
+                text-decoration: none; 
+            } 
+            .nav_menu a:hover { 
+                background-color: white; 
+                color: green; 
+            } 
+              
+			
+			/* CSS property for content section */ 
+			.columnA, .columnB, .columnC { 
+				float: left; 
+				width: 31%; 
+				padding: 15px; 
+				text-align:justify; 
+			} 
+			h2 { 
+				color:green; 
+				text-align:center; 
+			} 
+			
+			/* Media query to set website layout 
+			according to screen size */ 
+			@media screen and (max-width:600px) { 
+				.columnA, .columnB, .columnC { 
+					width: 50%; 
+				} 
+			} 
+			@media screen and (max-width:400px) { 
+				.columnA, .columnB, .columnC { 
+					width: 100%; 
+				} 
+                .column {
+  float: left;
+  width: 50%;
+  margin-top: 6px;
+  padding: 20px;
+}
+			} 
+		</style> 
+	</head> 
+	
+	<body style="background-image:url(images/img2.jpg);background-repeat:no-repeat;background-size:cover;background-color:lightgreen;"> 
+		 <form id="form1" runat="server">
+		<!-- header of website layout -->
+		<div class = "header"> 
+			<h2 style = "color:white;font-size:200%; font-weight: bolder;"> 
+				Interview Skills Test
+			</h2> 
+              <asp:Button ID="btnAdminLogin" runat="server" BackColor="#99FF33" BorderColor="#CCFF66" ForeColor="Red" OnClick="btnAdminLogin_Click" Text="Admin Login" />
+             &nbsp;
+            <asp:Button ID="btnSignin" runat="server" BackColor="#99FF33" BorderColor="#CCFF66" ForeColor="Red" OnClick="btnSignin_Click" Text="User Login" />
+&nbsp;
+            <asp:Button ID="btnReg" runat="server" BackColor="#99FF33" BorderColor="#CCFF66" ForeColor="Red" Text="Register" OnClick="btnReg_Click" />
+		</div> 
+		
+		<!-- nevigation menu for website layout 
+        <div class="navbar">
+            <a href = "Home.aspx">Home</a> 
+            <a href = "LogicalQuestions.aspx">Logical Questions </a> 
+            <a href = "TechnicalQuestions.aspx">Technical Questions </a> 
+            <a href = "AboutUs.aspx">About Us</a> 
+        </div>
+             <br/> -->
+           <ul class="main-navigation">
+  <li><a href="Home.aspx">Home </a></li>
+  <li><a href="LogicalQuestions.aspx">Logical Questions </a>
+  </li>
+  <li><a href="TechnicalQuestions.aspx">Technical Questions </a>
+  </li>
+  <li><a href="AboutUs.aspx">About Us</a></li>
+</ul>
+                      
+            <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server"> 
+
+        </asp:ContentPlaceHolder>
+      
+    </form>
+</body>
+</html>
